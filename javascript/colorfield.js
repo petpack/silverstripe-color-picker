@@ -14,6 +14,7 @@ var ColorFieldHandler = function(){
 				var mid = (rgb.r + rgb.g + rgb.b) / 3;
 				var col = mid > 127 ? '#000000' : '#ffffff';
 				$(id).val(hex).css({color:col, backgroundColor:'#' + hex});
+				$(id).change();
 			},
 			onBeforeShow: function () {
 				$(this).ColorPickerSetColor(this.value);
